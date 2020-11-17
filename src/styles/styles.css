@@ -1,0 +1,45 @@
+body {
+    margin: 0%;
+}
+.head {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+.page-name {
+    font-size: 50px;
+}
+a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left: 100px;
+}
+image {
+    height: 20px;
+    width: 20px;
+}
+.cvarea {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    padding: 2vh 20vw;
+}
+.personal {
+    background-color: blue;
+    width: 350px;
+}
+.info {
+    background-color: grey;
+    flex-grow: 1;
+}
+@media (max-width: 1024px) {
+    .cvarea {
+        padding: 1vh 3vw;
+    }
+    .personal {
+        width: 30vw;
+    }
+}
