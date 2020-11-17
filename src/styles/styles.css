@@ -25,15 +25,18 @@ image {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
-    padding: 2vh 20vw;
+    margin: 2vh 20vw;
+    box-shadow: 0px 0px 25px black;
 }
 .personal {
-    background-color: blue;
     width: 350px;
+    border: 2px solid black;
+    border-right: none;
 }
 .info {
     background-color: grey;
     flex-grow: 1;
+    border: 2px solid black;
 }
 @media (max-width: 1024px) {
     .cvarea {
@@ -42,4 +45,14 @@ image {
     .personal {
         width: 30vw;
     }
+}
+.per-heading {
+    margin: 20px 0px 10px 0px;
+    text-decoration: underline;
+}
+li {
+    font-size: 1.25em;
+}
+.list {
+    margin-left: 18px;
 }

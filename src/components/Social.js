@@ -1,0 +1,27 @@
+import React, { Component } from 'react';
+
+class Social extends Component {
+    constructor() {
+        super();
+        this.state = {};
+    }
+
+    render() {
+        const socArr = this.props.data.map((handle) => {
+            return (
+                <div className="container" key={handle.id}>
+                    <span className="subtitle has-text-black">
+                        {handle.website + ': '}
+                    </span>
+                    <span className="subtitle has-text-black">
+                        {handle.userName}
+                    </span>
+                </div>
+            );
+        });
+        console.log(socArr);
+        return socArr;
+    }
+}
+
+export default Social;
