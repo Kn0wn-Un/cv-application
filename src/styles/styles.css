@@ -59,3 +59,10 @@ li {
 .work-done {
     max-width: 300px;
 }
+.per-edit {
+    margin-left: 10px;
+}
+.summary-ta {
+    height: 200px;
+    width: 400px;
+}
