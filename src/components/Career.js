@@ -9,17 +9,17 @@ class Career extends Component {
     render() {
         let carArr = this.props.career.map((work) => {
             return (
-                <div class="level box" key={work.id}>
-                    <div class="level-left">
+                <div className="level box" key={work.id}>
+                    <div className="level-left">
                         <div>
-                            <div class="subtitle">{work.year}</div>
+                            <div className="subtitle">{work.year}</div>
                         </div>
                     </div>
-                    <div class="level-right">
+                    <div className="level-right">
                         <div>
-                            <div class="subtitle">{work.company}</div>
-                            <div class="subtitle">{work.position}</div>
-                            <div class="work-done">{work.workDone}</div>
+                            <div className="subtitle">{work.company}</div>
+                            <div className="subtitle">{work.position}</div>
+                            <div className="work-done">{work.workDone}</div>
                         </div>
                     </div>
                 </div>

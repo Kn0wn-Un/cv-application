@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
 class Contact extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {};
     }
 
     render() {
         let { Phone, email, LinkedIn } = this.props.data;
-        console.log(Phone);
         return (
             <div className="container has-text-black">
                 <div className="is-size-5 has-text-weight-bold per-heading">

@@ -19,7 +19,6 @@ class Social extends Component {
                 </div>
             );
         });
-        console.log(socArr);
         return socArr;
     }
 }

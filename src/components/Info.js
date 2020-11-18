@@ -7,35 +7,35 @@ import data from '../data';
 
 function Info() {
     return (
-        <div class="tile is-ancestor is-vertical">
-            <div class="tile is-parent">
-                <article class="tile is-child notification box">
-                    <div class="subtitle per-heading">Summary:</div>
-                    <div class="content">
+        <div className="tile is-ancestor is-vertical">
+            <div className="tile is-parent">
+                <article className="tile is-child notification box">
+                    <div className="subtitle per-heading">Summary:</div>
+                    <div className="content">
                         <Summary summary={data.summary} />
                     </div>
                 </article>
             </div>
-            <div class="tile is-parent">
-                <article class="tile is-child notification box">
-                    <div class="subtitle per-heading">Career:</div>
-                    <div class="content">
+            <div className="tile is-parent">
+                <article className="tile is-child notification box">
+                    <div className="subtitle per-heading">Career:</div>
+                    <div className="content">
                         <Career career={data.career} />
                     </div>
                 </article>
             </div>
-            <div class="tile is-parent">
-                <article class="tile is-child notification box">
-                    <div class="subtitle per-heading">Education:</div>
-                    <div class="content">
+            <div className="tile is-parent">
+                <article className="tile is-child notification box">
+                    <div className="subtitle per-heading">Education:</div>
+                    <div className="content">
                         <Education edu={data.education} />
                     </div>
                 </article>
             </div>
-            <div class="tile is-parent">
-                <article class="tile is-child notification box">
-                    <div class="subtitle per-heading">Skills:</div>
-                    <div class="content">
+            <div className="tile is-parent">
+                <article className="tile is-child notification box">
+                    <div className="subtitle per-heading">Skills:</div>
+                    <div className="content">
                         <Skills skills={data.skills} />
                     </div>
                 </article>

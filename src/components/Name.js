@@ -5,12 +5,11 @@ import Social from './Social';
 import Interests from './Interests';
 
 class Name extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {};
     }
     render() {
-        console.log(data);
         return (
             <section className="hero">
                 <div className="hero-body">

@@ -9,16 +9,16 @@ class Education extends Component {
     render() {
         let carArr = this.props.edu.map((study) => {
             return (
-                <div class="level box" key={study.id}>
-                    <div class="level-left">
+                <div className="level box" key={study.id}>
+                    <div className="level-left">
                         <div>
-                            <div class="subtitle">{study.year}</div>
+                            <div className="subtitle">{study.year}</div>
                         </div>
                     </div>
-                    <div class="level-right">
+                    <div className="level-right">
                         <div>
-                            <div class="subtitle">{study.title}</div>
-                            <div class="heading">{study.school}</div>
+                            <div className="subtitle">{study.title}</div>
+                            <div className="heading">{study.school}</div>
                         </div>
                     </div>
                 </div>
