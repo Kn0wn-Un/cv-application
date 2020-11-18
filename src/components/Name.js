@@ -15,8 +15,8 @@ class Name extends React.Component {
             <section className="hero">
                 <div className="hero-body">
                     <div className="container">
-                        <span className="title">First </span>
-                        <span className="title">Last</span>
+                        <span className="title"> {data.name.first + ' '} </span>
+                        <span className="title"> {data.name.last} </span>
                     </div>
                     <Contact data={data.contact} />
                     {data.social && (
