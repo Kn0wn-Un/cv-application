@@ -36,7 +36,7 @@ function Info() {
                 <article class="tile is-child notification box">
                     <div class="subtitle per-heading">Skills:</div>
                     <div class="content">
-                        <Skills />
+                        <Skills skills={data.skills} />
                     </div>
                 </article>
             </div>

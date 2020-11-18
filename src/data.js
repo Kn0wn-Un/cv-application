@@ -52,5 +52,32 @@ let data = {
             title: 'Bachelors in CSE',
         },
     ],
+    skills: [
+        {
+            id: 0,
+            name: 'Skill 1',
+            rating: 3,
+        },
+        {
+            id: 1,
+            name: 'Skill 2',
+            rating: 5,
+        },
+        {
+            id: 2,
+            name: 'Skill 3',
+            rating: 4,
+        },
+        {
+            id: 3,
+            name: 'Skill 4',
+            rating: 4,
+        },
+        {
+            id: 4,
+            name: 'Skill 5',
+            rating: 5,
+        },
+    ],
 };
 export default data;
