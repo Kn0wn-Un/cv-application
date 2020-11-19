@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
+import data from '../data';
 
 class Skills extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            skills: this.props.skills,
+        };
+        this.delSkill = this.delSkill.bind(this);
+    }
+
+    delSkill(e) {
+        data.skills.splice(Number(e.target.id), 1);
+        this.setState({ skills: data.skills });
     }
     genStars(num) {
         let stars = [...Array(5).keys()];
@@ -16,9 +25,9 @@ class Skills extends Component {
         return <div>{stArr}</div>;
     }
     render() {
-        const skArr = this.props.skills.map((skill) => {
+        const skArr = this.props.skills.map((skill, index) => {
             return (
-                <div className="level" key={skill.id}>
+                <div className="level" key={index}>
                     <div className="level-item">
                         <div>
                             <div className="subtitle">{skill.name}</div>
@@ -27,6 +36,13 @@ class Skills extends Component {
                     <div className="level-item">
                         {this.genStars(skill.rating)}
                     </div>
+                    {this.props.edit ? (
+                        <span
+                            id={index}
+                            className="fa fa-trash info-del"
+                            onClick={this.delSkill}
+                        ></span>
+                    ) : null}
                 </div>
             );
         });
