@@ -25,7 +25,10 @@ class Career extends Component {
                     </div>
                     <div className="level-right">
                         <div>
-                            <div className="subtitle">
+                            <div
+                                className="subtitle"
+                                style={{ marginBottom: '10px' }}
+                            >
                                 {work.company}
                                 {this.props.edit ? (
                                     <span
@@ -35,7 +38,7 @@ class Career extends Component {
                                     ></span>
                                 ) : null}
                             </div>
-                            <div className="subtitle">{work.position}</div>
+                            <div className="heading">{work.position}</div>
                             <div className="work-done">{work.workDone}</div>
                         </div>
                     </div>

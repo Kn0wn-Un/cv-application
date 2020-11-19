@@ -74,3 +74,6 @@ li {
 .info-del {
     float: right;
 }
+.heading {
+    font-size: 15px;
+}

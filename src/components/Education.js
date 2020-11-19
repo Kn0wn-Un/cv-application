@@ -25,7 +25,10 @@ class Education extends Component {
                     </div>
                     <div className="level-right">
                         <div>
-                            <div className="subtitle">
+                            <div
+                                className="subtitle"
+                                style={{ marginBottom: '10px' }}
+                            >
                                 {study.title}
                                 {this.props.edit ? (
                                     <span
@@ -35,7 +38,9 @@ class Education extends Component {
                                     ></span>
                                 ) : null}
                             </div>
-                            <div className="heading">{study.school}</div>
+                            <div className="heading work-done">
+                                {study.school}
+                            </div>
                         </div>
                     </div>
                 </div>

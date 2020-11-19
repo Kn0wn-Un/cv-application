@@ -27,7 +27,6 @@ class SkillsInput extends Component {
         data.skills.push({ ...obj, id: data.skills.length });
         this.props.done();
         e.preventDefault();
-        console.log(data.skills);
     }
     handleChange(e) {
         this.setState({ [e.target.id]: e.target.value });

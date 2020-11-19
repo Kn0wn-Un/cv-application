@@ -45,7 +45,6 @@ class CareerInput extends Component {
         data.career.push({ ...obj, id: data.career.length });
         this.props.done();
         e.preventDefault();
-        console.log(data.career);
     }
     handleChange(e) {
         this.setState({ [e.target.id]: e.target.value });

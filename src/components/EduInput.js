@@ -36,7 +36,6 @@ class EduInput extends Component {
         data.education.push({ ...obj, id: data.education.length });
         this.props.done();
         e.preventDefault();
-        console.log(data.education);
     }
     handleChange(e) {
         this.setState({ [e.target.id]: e.target.value });
