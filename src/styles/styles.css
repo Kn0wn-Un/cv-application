@@ -57,7 +57,8 @@ li {
     margin-left: 18px;
 }
 .work-done {
-    max-width: 300px;
+    width: 300px;
+    word-wrap: break-word;
 }
 .per-edit {
     margin-left: 10px;
@@ -65,4 +66,11 @@ li {
 .summary-ta {
     height: 200px;
     width: 400px;
+}
+.summary {
+    width: 35vw;
+    word-wrap: break-word;
+}
+.info-del {
+    float: right;
 }

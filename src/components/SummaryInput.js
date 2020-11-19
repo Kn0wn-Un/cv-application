@@ -29,7 +29,7 @@ class SummaryInput extends Component {
                 />
                 <br />
                 <button>Submit</button>
-                <button>Cancel</button>
+                <button onClick={this.props.done}>Cancel</button>
             </form>
         );
     }
