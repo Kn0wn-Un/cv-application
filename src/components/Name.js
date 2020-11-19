@@ -5,6 +5,7 @@ import Social from './Social';
 import Interests from './Interests';
 import NameInput from './NameInput';
 import ContactInput from './ContactInput';
+import SocialInput from './SocialInput';
 
 class Name extends React.Component {
     constructor(props) {
@@ -13,15 +14,22 @@ class Name extends React.Component {
             nameEdit: false,
             contactEdit: false,
             socialEdit: false,
+            socData: data.social,
         };
         this.editName = this.editName.bind(this);
         this.editContact = this.editContact.bind(this);
+        this.editSocial = this.editSocial.bind(this);
     }
     editName() {
         this.setState({ nameEdit: !this.state.nameEdit });
     }
     editContact() {
         this.setState({ contactEdit: !this.state.contactEdit });
+    }
+    editSocial() {
+        this.setState({
+            socialEdit: !this.state.socialEdit,
+        });
     }
     render() {
         return (
@@ -57,8 +65,16 @@ class Name extends React.Component {
                         <div className="container has-text-black">
                             <div className="is-size-5 has-text-weight-bold per-heading">
                                 Social
+                                <i
+                                    className="fa fa-pencil per-edit"
+                                    aria-hidden="true"
+                                    onClick={this.editSocial}
+                                ></i>
                             </div>
-                            <Social data={data.social} />
+                            {this.state.socialEdit ? (
+                                <SocialInput done={this.editSocial} />
+                            ) : null}
+                            <Social edit={this.state.socialEdit} />
                         </div>
                     )}
                     {data.interests && (
