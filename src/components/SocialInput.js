@@ -58,7 +58,6 @@ class SocialInput extends Component {
                 ></input>
                 <br />
                 <button>Submit</button>
-                <button>Cancel</button>
             </form>
         );
     }

@@ -5,7 +5,7 @@ class Social extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: data.social,
+            data: this.props.data,
         };
         this.delSocial = this.delSocial.bind(this);
     }

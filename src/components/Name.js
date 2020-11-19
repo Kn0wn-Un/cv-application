@@ -6,6 +6,7 @@ import Interests from './Interests';
 import NameInput from './NameInput';
 import ContactInput from './ContactInput';
 import SocialInput from './SocialInput';
+import InteInput from './InteInput';
 
 class Name extends React.Component {
     constructor(props) {
@@ -15,10 +16,12 @@ class Name extends React.Component {
             contactEdit: false,
             socialEdit: false,
             socData: data.social,
+            inteEdit: false,
         };
         this.editName = this.editName.bind(this);
         this.editContact = this.editContact.bind(this);
         this.editSocial = this.editSocial.bind(this);
+        this.editInte = this.editInte.bind(this);
     }
     editName() {
         this.setState({ nameEdit: !this.state.nameEdit });
@@ -27,9 +30,10 @@ class Name extends React.Component {
         this.setState({ contactEdit: !this.state.contactEdit });
     }
     editSocial() {
-        this.setState({
-            socialEdit: !this.state.socialEdit,
-        });
+        this.setState({ socialEdit: !this.state.socialEdit });
+    }
+    editInte() {
+        this.setState({ inteEdit: !this.state.inteEdit });
     }
     render() {
         return (
@@ -74,15 +78,29 @@ class Name extends React.Component {
                             {this.state.socialEdit ? (
                                 <SocialInput done={this.editSocial} />
                             ) : null}
-                            <Social edit={this.state.socialEdit} />
+                            <Social
+                                data={data.social}
+                                edit={this.state.socialEdit}
+                            />
                         </div>
                     )}
                     {data.interests && (
                         <div className="container has-text-black">
                             <div className="is-size-5 has-text-weight-bold per-heading">
                                 Interests
+                                <i
+                                    className="fa fa-pencil per-edit"
+                                    aria-hidden="true"
+                                    onClick={this.editInte}
+                                ></i>
                             </div>
-                            <Interests data={data.interests} />
+                            {this.state.inteEdit ? (
+                                <InteInput done={this.editInte} />
+                            ) : null}
+                            <Interests
+                                data={data.interests}
+                                edit={this.state.inteEdit}
+                            />
                         </div>
                     )}
                 </div>
